@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header contact-info d-flex justify-content-start" *ngIf="user">
+    <app-user-picture [user]="user" [size]="42"></app-user-picture>
+    <div class="username-container">
+      <div class="username">{{user.firstName}} {{user.lastName}} <app-user-status-circle [user]="user"></app-user-status-circle></div>
+      <div class="userstate"><app-user-last-active [user]="user"></app-user-last-active></div>
+    </div>
+  </div>
+  <ul #target *ngIf="conversation" class="chat-zone">
+    <li *ngFor="let msg of conversation.messages">
+      <app-message [message]="msg" [conversation]="conversation" [seen]="user" (OnMessageDisplay)="scrollDown()"></app-message>
+    </li>
+   </ul>
+  <div *ngIf="conversation" class="input-message row">
+    <app-input-message (message)="onSend($event)" (file)="onSendFile($event)"></app-input-message>
+   </div>
+
+</div>

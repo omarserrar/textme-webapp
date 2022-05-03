@@ -1,0 +1,9 @@
+<div class="container user-info-container">
+  <div class="user-info d-flex justify-content-between" *ngIf="user">
+    <div class="d-flex"><app-user-picture [user]="user" (click)="editUser()"></app-user-picture>
+      {{user.firstName}} {{user.lastName}}</div>
+
+  </div>
+
+
+</div>

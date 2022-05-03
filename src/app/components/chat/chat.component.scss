@@ -1,0 +1,28 @@
+.card{
+  height: 100%;
+}
+.chat-zone{
+  overflow: scroll;
+  overflow-x: unset;
+  height: 80%;
+  padding-bottom: 5px;
+  list-style: none;
+}
+.contact-info{
+  padding: 4px 0px 4px 13px;
+  background-color: #f4f4f4;
+  color: #4c4c4c;
+
+}
+.input-message{
+  height: 5%;
+}
+.username-container{
+  margin-left: 5px;
+}
+.username{
+  font-weight: 600;
+}
+.userstate{
+  font-weight: 12px;
+}

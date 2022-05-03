@@ -1,0 +1,30 @@
+.form-control {
+  border-bottom: 3px solid green;
+  border-radius: 3px;
+  background: #f5fff8;
+  margin-bottom: 20px;
+  letter-spacing: 1px
+}
+
+.form-control:focus {
+  border: 1px solid #57557A;
+  border-radius: 3px;
+  border-bottom: 3px solid green;
+  box-shadow: none;
+  background: #bdfad3;
+  color: #464646;
+  letter-spacing: 1px
+}
+.myform {
+  padding: 0 25px 0 33px
+}
+.btn-primary {
+  background: linear-gradient(135deg, #3bd270 39%, #16ac4b 101%);
+  border: none;
+  border-radius: 50px
+}
+
+.btn-primary:focus {
+  box-shadow: none;
+  border: none
+}

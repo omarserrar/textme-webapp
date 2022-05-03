@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-start green-header">
+  <a class="return-button" (click)="return()"><i class="bi bi-arrow-left"></i></a>
+  <span> Edit your informations </span>
+
+</div>
+<div>
+  <app-picture-edit *ngIf="user" [user]="user"></app-picture-edit>
+</div>
+<hr>
+<form *ngIf="user && userForm" [formGroup]="userForm" (ngSubmit)="onSave()">
+  <div class="alert alert-primary" role="alert" *ngIf="success">
+    Account updated!
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+    {{errorMessage}}
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control {{getErrorIfTouched('username')?'is-invalid':''}}" id="username" placeholder="Username" name="username" formControlName="username" [(ngModel)]="newUser.username">
+    <app-form-field-error [control]="getErrorIfTouched('firstname')" name="Username"></app-form-field-error>
+  </div>
+  <div class="form-group row">
+    <div class="col">
+      <label for="firstname">First Name</label>
+      <input type="text" class="form-control {{getErrorIfTouched('firstname')?'is-invalid':''}}" id="firstname" placeholder="First Name" name="firstname" formControlName="firstname" [(ngModel)]="newUser.firstName">
+      <app-form-field-error [control]="getErrorIfTouched('firstname')" name="First Name"></app-form-field-error>
+    </div>
+    <div class="col">
+      <label for="lastname">Last Name</label>
+      <input type="text" class="form-control {{getErrorIfTouched('lastname')?'is-invalid':''}}" id="lastname" placeholder="Last Name" name="lastname" formControlName="lastname" [(ngModel)]="newUser.lastName">
+      <app-form-field-error [control]="getErrorIfTouched('lastname')" name="Last Name"></app-form-field-error>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col">
+      <label for="email">Email</label>
+      <input type="text" class="form-control {{getErrorIfTouched('email')?'is-invalid':''}}" id="email" placeholder="Email" name="email" formControlName="email" [(ngModel)]="newUser.email">
+      <app-form-field-error [control]="getErrorIfTouched('email')" name="Email"></app-form-field-error>
+    </div>
+    <div class="col">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control {{getErrorIfTouched('phone')?'is-invalid':''}}" id="phone" placeholder="Phone" name="phone" formControlName="phone" aria-describedby="phoneValidation" [(ngModel)]="newUser.phone">
+      <app-form-field-error [control]="getErrorIfTouched('phone')" name="Phone" described="phoneValidation"></app-form-field-error>
+    </div>
+  </div>
+  <br>
+  <div class="form-group row">
+    <button type="submit" class="btn btn-primary">Save</button>
+  </div>
+</form>

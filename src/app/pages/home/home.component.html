@@ -1,0 +1,31 @@
+<div class="container-fluid vh-100">
+  <div class="row">
+    <div class="col left-col">
+      <div *ngIf="!edit"><app-user-info (onEditUser)="enableEdit()"></app-user-info></div>
+      <div *ngIf="edit"><app-user-edit-form (onExit)="disableEdit()"></app-user-edit-form></div>
+      <div *ngIf="!edit"><app-conversations-list (onClickContact)="showContact($event)"></app-conversations-list></div>
+
+    </div>
+    <div class="col-6">
+      <app-chat [conversation]="conversation"></app-chat>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="green-header">
+          Contact
+        </div>
+        <ul class="list-group list-group-flush">
+          <app-contact-list (onClickContact)="showContact($event)"></app-contact-list>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="green-header">
+          Discover
+        </div>
+        <ul class="list-group list-group-flush">
+          <app-list></app-list>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

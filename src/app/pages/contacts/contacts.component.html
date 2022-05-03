@@ -1,0 +1,8 @@
+<h1>Contacts</h1>
+<p *ngIf="user && contacts">
+  Hi {{user.username}}, you have {{contacts.length}} contacts.
+</p>
+<app-contact-list></app-contact-list>
+
+<h1>Discover New Friends</h1>
+<app-list></app-list>

@@ -1,0 +1,20 @@
+<div *ngIf="sentByUser" class="user-message d-flex justify-content-between">
+  <span>{{message.sentDate |  date:"dd MMM H:mm"}}</span>
+  <div class="message-zone">
+    <div class="message-bubble rounded" *ngIf="!imageUrl">{{message.textContent }}</div>
+    <div class="message-bubble image rounded" *ngIf="imageUrl">
+      <img [src]="imageUrl" class="image-message" >
+    </div>
+    <div *ngIf="user && conversation.lastMessageSeen && message.id == conversation.lastMessageSeen.id"><app-user-picture [user]="user" [size]="10"></app-user-picture> seen </div>
+  </div>
+
+</div>
+<div *ngIf="!sentByUser" class="contact-message d-flex justify-content-between">
+  <div class="message-zone rounded">
+    <div class="message-bubble rounded" *ngIf="!imageUrl">{{message.textContent }}</div>
+    <div class="message-bubble image rounded" *ngIf="imageUrl">
+      <img [src]="imageUrl" class="image-message" >
+    </div>
+  </div>
+  <span>{{message.sentDate |  date:"dd MMM H:mm"}}</span>
+</div>

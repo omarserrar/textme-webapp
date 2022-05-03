@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card py-3 px-2">
+            <div *ngIf="register">
+              <div class="formHeader"><span>CREATE AN ACCOUNT</span></div>
+              <div class="formTitle"><span>AS A GUEST</span></div>
+              <app-register-guest-form></app-register-guest-form>
+              <hr>
+              <div class="formTitle"><span>OR CREATE AN ACCOUNT</span></div>
+
+              <app-register-form></app-register-form>
+              <a class="link" (click)="switchForm(false)">Already have an account ?</a>
+
+            </div>
+          <div *ngIf="!register">
+            <div class="formHeader"><span>LOGIN</span></div>
+            <app-login-form></app-login-form>
+            <a class="link" (click)="switchForm(true)">Or create an account</a>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>

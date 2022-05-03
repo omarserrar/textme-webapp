@@ -1,0 +1,13 @@
+.sender-name{
+  font-weight: 600;
+}
+.conversation-user{
+  font-size: 14pt;
+  font-weight: 500;
+}
+.message-content{
+  text-overflow: ellipsis;
+  width: 137px;
+  overflow: hidden;
+  padding-right: 6px;
+}

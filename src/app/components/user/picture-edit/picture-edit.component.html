@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center">
+    <div class="picture-holder" [ngStyle]="{'height.px': 135 , 'width.px': 135}" (mouseenter)="hoverPicture(true)" (mouseleave)="hoverPicture(false)">
+      <span class="edit-hover position-absolute top-50 start-50 translate-middle" *ngIf="hover && !uploading" (mouseover)="hoverPicture(true)" (click)="selectImage()">Edit picture <i class="bi bi-camera-fill"></i></span>
+      <span class="edit-hover position-absolute top-50 start-50 translate-middle" *ngIf="uploading">Uploading... <div class="spinner-border" role="status">
+      </div></span>
+      <app-user-picture [user]="user" [size]="135" *ngIf="!uploading" ></app-user-picture>
+    </div>
+    <form class="hidden" >
+      <input type="file" id="upload-img" accept="image/png, image/jpeg" (change)="upload($event)">
+    </form>
+</div>

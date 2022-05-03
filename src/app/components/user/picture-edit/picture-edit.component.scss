@@ -1,0 +1,26 @@
+.picture-holder{
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 0;
+  transform: translateZ(0);
+  overflow: hidden;
+}
+.edit-hover{
+  position: absolute;
+  background-color: #00000066;
+  color: white;
+  padding: 38px 19px 19px 19px;
+  height: 100%;
+  text-align: center;
+  font-size: 19px;
+  width: 100%;
+}
+.hidden{
+  display: none;
+}

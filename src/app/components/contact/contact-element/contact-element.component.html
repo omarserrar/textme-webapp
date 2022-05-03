@@ -1,0 +1,7 @@
+<div class="d-flex justify-content-between">
+  <app-user-row *ngIf="user" [user]="user"></app-user-row>
+  <span>
+    <button (click)="delete()" *ngIf="!deleted" class="icon-button"><i class="bi bi-trash-fill"></i></button>
+    <span *ngIf="deleted">Contact Deleted !</span>
+  </span>
+</div>

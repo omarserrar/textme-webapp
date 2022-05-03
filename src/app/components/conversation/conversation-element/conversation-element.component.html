@@ -1,0 +1,14 @@
+<span *ngIf="user" class="conversation-user d-flex">
+  <app-user-picture [user]="user"></app-user-picture>
+  {{user.firstName}} {{user.lastName}}
+  <app-user-status-circle [user]="user"></app-user-status-circle>
+</span>
+<div class="d-flex justify-content-between" *ngIf="conversation && lastMessage">
+  <span class="sender-name">{{lastMessage.sender.firstName}}: </span>
+  <div class="message-content" *ngIf="!lastMessage.image">{{lastMessage.textContent}}</div>
+  <div class="message-content" *ngIf="lastMessage.image"><i>Sent an image</i></div>
+  <span class="date">{{lastMessage.sentDate |  date:"dd MMM H:mm"}}</span>
+  <span class="badge bg-primary" *ngIf="conversation.unread">{{conversation.unread}}</span>
+  <span class="badge bg-primary" *ngIf="lastMessage==conversation.lastMessageSeen"><i>read</i></span>
+</div>
+

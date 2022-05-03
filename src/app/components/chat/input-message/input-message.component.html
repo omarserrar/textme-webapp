@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()" class="d-flex flex-row">
+  <button type="button" class="btn btn-light" (click)="selectFile()" ><i class="bi bi-image"></i></button>
+  <div class="input-zone"> <textarea class="form-control" id="exampleFormControlTextarea1" style="resize: none;" name="message" [(ngModel)] = "message"></textarea></div>
+  <button type="submit" class="btn btn-primary" ><i class="bi bi-send"></i></button>
+  <input type="file" id="send-img" accept="image/png, image/jpeg" (change)="upload($event)">
+</form>

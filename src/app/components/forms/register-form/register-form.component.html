@@ -1,0 +1,10 @@
+<form class="myform" *ngIf="registerForm" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <p *ngIf="errorMessage">{{errorMessage}}</p>
+    <div class="form-group"> <input type="text" class="form-control" placeholder="Username" formControlName="username" [(ngModel)]="user.username"> </div>
+    <div class="row g-3">
+      <div class="col"><input type="text" class="form-control" placeholder="Fist Name" formControlName="firstname" [(ngModel)]="user.firstName"></div>
+      <div class="col"> <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname" [(ngModel)]="user.lastName"></div>
+    </div>
+    <div class="form-group"> <input type="password" class="form-control" placeholder="Password" formControlName="password" [(ngModel)]="user.password"> </div>
+    <div class="form-group mt-3"> <button type="submit" class="btn btn-block btn-primary btn-lg"><small><i class="far fa-user pr-2"></i>Sign up</small></button> </div>
+</form>

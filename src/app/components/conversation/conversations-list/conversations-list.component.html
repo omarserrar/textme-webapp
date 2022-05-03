@@ -1,0 +1,9 @@
+<ul class="list-group" *ngIf="conversations">
+  <ng-container *ngFor="let c of conversations" >
+    <li class="list-group-item" *ngIf="c.messages && c.messages.length>0"  >
+        <app-conversation-element [conversation]="c"  (click)="onClick(c)">
+        </app-conversation-element>
+    </li>
+  </ng-container>
+
+</ul>

@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+
+body{
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  background-color: #19123B
+}
+
+.green-header{
+  text-align: center;
+  background-color: #008069;
+  color: white;
+  padding: 13px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.icon-button{
+  background-color: #faebd700;
+  border: 0;
+}
+.btn-primary {
+  background-color: #008069 !important;
+  border: #008069 !important;
+}
+
+.form-control {
+  border-bottom: 3px solid green;
+  border-radius: 3px;
+  background: #f5fff8;
+  margin-bottom: 20px;
+  letter-spacing: 1px
+}
+
+.form-control:focus {
+  border: 1px solid #57557A;
+  border-radius: 3px;
+  border-bottom: 3px solid green;
+  box-shadow: none;
+  background: #bdfad3;
+  color: #464646;
+  letter-spacing: 1px
+}
+.myform {
+  padding: 0 25px 0 33px
+}
+.btn-primary {
+  background: linear-gradient(135deg, #3bd270 39%, #16ac4b 101%);
+  border: none;
+  border-radius: 50px
+}
+
+.btn-primary:focus {
+  box-shadow: none;
+  border: none
+}

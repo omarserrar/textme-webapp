@@ -1,0 +1,8 @@
+<span class="d-flex justify-content-between">
+  <span *ngIf="user"><app-user-picture [user]="user"></app-user-picture></span>
+    <div *ngIf="user">
+      <div>{{user.firstName}} {{user.lastName}}</div>
+
+      <app-user-status [user]="user"></app-user-status>
+    </div>
+</span>
